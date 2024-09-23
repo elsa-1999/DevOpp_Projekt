@@ -9,3 +9,6 @@ images:
 - 'gcr.io/testing-or-devsecops/docker-flask-app'
 
 logs_bucket: gs://actuelbucket  
+
+options:
+  logging: CLOUD_LOGGING_ONLY
