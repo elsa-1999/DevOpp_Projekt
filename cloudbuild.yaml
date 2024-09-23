@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/testing-or-devsecops/docker-flask-app', '.']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/testing-or-devsecops/docker-flask-app']
+
+images:
+- 'gcr.io/testing-or-devsecops/docker-flask-app'
+
+logs_bucket: gs://neubucket  
